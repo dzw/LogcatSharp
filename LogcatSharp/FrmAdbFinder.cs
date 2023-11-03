@@ -11,9 +11,9 @@ using System.IO;
 
 namespace LogcatSharp
 {
-	public partial class frmAdbFinder : Form
+	public partial class FrmAdbFinder : Form
 	{
-		public frmAdbFinder()
+		public FrmAdbFinder()
 		{
 			InitializeComponent();
 		}

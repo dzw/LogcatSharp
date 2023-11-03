@@ -3,35 +3,64 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using LitJson;
 
-namespace LogcatSharp
-{
-	public class Settings
-	{
-		public static string GetPath()
-		{
-			var file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "adb-path.txt");
+namespace LogcatSharp {
+    public class Settings {
+        private static Settings _Instance = null;
 
-			if (File.Exists(file))
-			{
-				var adbPath = File.ReadAllText(file);
+        public static Settings Instance {
+            get
+            {
+                if (_Instance == null)
+                    return _Instance = new Settings();
+                return _Instance;
+            }
+        }
 
-				if (File.Exists(adbPath))
-					return adbPath;
-			}
+        private static string ConfigFile() {
+            var file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "adb-path.txt");
+            return file;
+        }
 
-			return null;
-		}
+        private JsonData _jsonData;
 
-		public static void SavePath(string adbPath)
-		{
-			var file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "adb-path.txt");
+        public Settings() {
+            //
+            var file = ConfigFile();
 
-			try
-			{
-				File.WriteAllText(file, adbPath);
-			}
-			catch { }
-		}
-	}
+            if (File.Exists(file)) {
+                var json = File.ReadAllText(file);
+                try {
+                    _jsonData = JsonMapper.ToObject(json);
+                    return;
+                }
+                catch (Exception e) {
+                    Console.WriteLine(e);
+                }
+            }
+
+            _jsonData = new JsonData();
+        }
+
+        public string GetPath() {
+            if (_jsonData.ContainsKey("adb")) {
+                return _jsonData["adb"] + "";
+            }
+
+            return null;
+        }
+
+
+        public void SavePath(string adbPath) {
+            _jsonData["adb"] = adbPath;
+            var file = ConfigFile();
+
+            try {
+                File.WriteAllText(file, _jsonData.ToJson());
+            }
+            catch {
+            }
+        }
+    }
 }
