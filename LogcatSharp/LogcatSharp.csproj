@@ -104,6 +104,12 @@
     <Content Include="Icons\51.png" />
     <Content Include="Icons\98.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogCatParser\LogCatParser.csproj">
+      <Project>{26e2d90e-f344-4074-b7da-95833a27b0ac}</Project>
+      <Name>LogCatParser</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

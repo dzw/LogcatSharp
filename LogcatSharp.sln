@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogcatSharp", "LogcatSharp\LogcatSharp.csproj", "{8D4F4A31-C8F5-4EB7-A242-0271726F1D6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessShittyLogcat", "LessShittyLogcat\LessShittyLogcat.csproj", "{D3D6A3C6-9A9B-4829-88B7-FE097F26295E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogCatParser", "LogCatParser\LogCatParser.csproj", "{26E2D90E-F344-4074-B7DA-95833A27B0AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +17,14 @@ Global
 		{8D4F4A31-C8F5-4EB7-A242-0271726F1D6B}.Debug|x86.Build.0 = Debug|x86
 		{8D4F4A31-C8F5-4EB7-A242-0271726F1D6B}.Release|x86.ActiveCfg = Release|x86
 		{8D4F4A31-C8F5-4EB7-A242-0271726F1D6B}.Release|x86.Build.0 = Release|x86
+		{D3D6A3C6-9A9B-4829-88B7-FE097F26295E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D3D6A3C6-9A9B-4829-88B7-FE097F26295E}.Debug|x86.Build.0 = Debug|Any CPU
+		{D3D6A3C6-9A9B-4829-88B7-FE097F26295E}.Release|x86.ActiveCfg = Release|Any CPU
+		{D3D6A3C6-9A9B-4829-88B7-FE097F26295E}.Release|x86.Build.0 = Release|Any CPU
+		{26E2D90E-F344-4074-B7DA-95833A27B0AC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{26E2D90E-F344-4074-B7DA-95833A27B0AC}.Debug|x86.Build.0 = Debug|Any CPU
+		{26E2D90E-F344-4074-B7DA-95833A27B0AC}.Release|x86.ActiveCfg = Release|Any CPU
+		{26E2D90E-F344-4074-B7DA-95833A27B0AC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
