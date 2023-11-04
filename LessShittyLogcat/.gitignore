@@ -1,0 +1,12 @@
+#IDE STUFF
+.idea
+.vs
+.vscode
+/bin/
+/obj/
+
+desktop.ini
+
+exclude_*
+
+/LessShittyLogcat_*
