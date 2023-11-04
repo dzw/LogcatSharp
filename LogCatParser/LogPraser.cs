@@ -112,7 +112,7 @@ namespace LessShittyLogcat {
 
 			LBL_CantParse:
 
-			LogEntry f = new LogEntry(){ text = rawString, color = Colors.DarkBlue };
+			LogEntry f = new LogEntry(){ raw = rawString, color = Colors.DarkBlue };
 			pendingLogs.Add( f );
 
 		}

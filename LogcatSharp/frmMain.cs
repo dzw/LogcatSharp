@@ -214,7 +214,7 @@ namespace LogcatSharp {
                 LogEntry l = logPraser.pendingLogs[0];
                 logPraser.pendingLogs.RemoveAt(0);
 
-                var lText = l.text == null ? l.raw : l.text;
+                var lText = l.raw == null ? l.text : l.raw;
                 logList.Add(lText);
                 // textAdb.AppendText(filterData(l.raw));
             }
